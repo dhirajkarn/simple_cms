@@ -1,0 +1,13 @@
+<h1>Demo Hello</h1>
+<p>Hello from hello view</p>
+
+<%	@array.each do |num| %>
+<%= num + 10 %><br>
+<% end %>
+
+ID: <%= @id %><br>
+Next Page: <%= @page + 1 %>
+
+<%= link_to("Home", {:action => 'index'}) %>
+<hr>
+<%= params.inspect %>
