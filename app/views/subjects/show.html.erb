@@ -1,8 +1,12 @@
-<%= link_to("<< Back to List", {:action => "list"}, :class => 'back-link') %>
-<%= link_to("Create Subject >>", {:action => "new"}, :class => 'back-link') %>
+<% if !flash[:notice].blank? %>
+<div class="notice">
+	<%= flash[:notice] %>
+</div>
+<% end %>
 <div class="subject show">
 	<h2>Show Subject</h2>
-
+	<%= link_to("<< Back to List", {:action => "list"}, :class => 'back-link') %>
+	<%= link_to("Create Subject >>", {:action => "new"}, :class => 'back-link') %>
 	<table summary="Subject detail view">
 		<tr>
 			<th>Name</th>
